@@ -62,8 +62,8 @@ def init_jvm(jvmpath=None, max_heap_size=1024):
 
     if jvmpath:
         jpype.startJVM(jvmpath, '-Dfile.encoding=UTF8',
-                                '-ea', '-Xmx{}m'.format(max_heap_size),
-                                classpath=classpath)
+                                '-ea', '-Xmx{}m'.format(max_heap_size))
+                                # classpath=classpath)
                                 # convertStrings=True)
     else:
         raise ValueError("Please specify the JVM path.")
